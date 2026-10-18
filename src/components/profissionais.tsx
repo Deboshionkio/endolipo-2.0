@@ -142,16 +142,16 @@ export function ProfissionaisPage() {
       {/* Top Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            <a href="/" className="brand text-2xl sm:text-3xl lg:text-4xl" aria-label="Endolipo, voltar para home">
+          <div className="flex items-center gap-2.5 shrink-0">
+            <a href="/" className="brand text-2xl lg:text-3xl" aria-label="Endolipo, voltar para home">
               endolipo<sup>®</sup><span className="brand-star text-brand-orange">✧</span>
             </a>
-            <span className="hidden md:inline-flex items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50 dark:bg-orange-950/60 border border-brand-orange/30 px-2.5 py-1 rounded-full whitespace-nowrap">
-              Área do Profissional da Saúde
+            <span className="hidden sm:inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50 dark:bg-orange-950/60 border border-brand-orange/30 px-2 py-0.5 rounded-full whitespace-nowrap">
+              Área Profissional
             </span>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-7 text-xs xl:text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 text-xs xl:text-sm font-medium mx-4 xl:mx-8">
             <a href="#pilares" className="whitespace-nowrap hover:text-brand-orange transition-colors">6 Pilares</a>
             <a href="#publico" className="whitespace-nowrap hover:text-brand-orange transition-colors">Quem pode participar</a>
             <a href="#turmas" className="whitespace-nowrap hover:text-brand-orange transition-colors">Próximas Turmas</a>
@@ -161,10 +161,13 @@ export function ProfissionaisPage() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-3 shrink-0">
-            <Button className="action whatsapp text-xs md:text-sm h-10 px-4 md:px-5 shrink-0 whitespace-nowrap" asChild>
+          <div className="flex items-center gap-2 shrink-0">
+            <Button 
+              className="h-9 px-3.5 rounded-full bg-whatsapp text-white hover:opacity-95 font-semibold text-xs flex items-center gap-1.5 shadow-sm shrink-0 whitespace-nowrap transition-all" 
+              asChild
+            >
               <a href={getProfissionalWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4 shrink-0" />
+                <MessageCircle className="w-3.5 h-3.5 shrink-0" />
                 <span>Falar com Consultor</span>
               </a>
             </Button>
