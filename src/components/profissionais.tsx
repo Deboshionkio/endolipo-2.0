@@ -142,16 +142,16 @@ export function ProfissionaisPage() {
       {/* Top Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2.5 shrink-0">
+          <div className="flex items-center shrink-0">
             <a href="/" className="brand text-2xl lg:text-3xl" aria-label="Endolipo, voltar para home">
               endolipo<sup>®</sup><span className="brand-star text-brand-orange">✧</span>
             </a>
-            <span className="hidden sm:inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50 dark:bg-orange-950/60 border border-brand-orange/30 px-2 py-0.5 rounded-full whitespace-nowrap">
+            <span className="hidden sm:inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50 dark:bg-orange-950/60 border border-brand-orange/30 px-2 py-0.5 rounded-full whitespace-nowrap mx-4 lg:mx-6">
               Área Profissional
             </span>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 text-xs xl:text-sm font-medium mx-4 xl:mx-8">
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 text-xs xl:text-sm font-medium mr-4 xl:mr-8">
             <a href="#pilares" className="whitespace-nowrap hover:text-brand-orange transition-colors">6 Pilares</a>
             <a href="#publico" className="whitespace-nowrap hover:text-brand-orange transition-colors">Quem pode participar</a>
             <a href="#turmas" className="whitespace-nowrap hover:text-brand-orange transition-colors">Próximas Turmas</a>
