@@ -152,7 +152,6 @@ export function ProfissionaisPage() {
           </div>
 
           <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <a href="#proposta" className="hover:text-brand-orange transition-colors">Rentabilidade</a>
             <a href="#pilares" className="hover:text-brand-orange transition-colors">6 Pilares</a>
             <a href="#publico" className="hover:text-brand-orange transition-colors">Quem pode participar</a>
             <a href="#turmas" className="hover:text-brand-orange transition-colors">Próximas Turmas</a>
@@ -183,13 +182,6 @@ export function ProfissionaisPage() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-card border-b border-border px-6 py-6 space-y-4">
-            <a 
-              href="#proposta" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-base font-medium py-1"
-            >
-              Rentabilidade
-            </a>
             <a 
               href="#pilares" 
               onClick={() => setMobileMenuOpen(false)}
@@ -249,7 +241,7 @@ export function ProfissionaisPage() {
               </p>
 
               {/* Metrics Pill Grid */}
-              <div className="grid sm:grid-cols-3 gap-4 pt-4" id="proposta">
+              <div className="grid sm:grid-cols-3 gap-4 pt-4">
                 <div className="bg-card border border-border rounded-xl p-4 shadow-sm hover:border-brand-orange/40 transition-colors">
                   <div className="text-2xl lg:text-3xl font-bold text-foreground">+25k a 60k</div>
                   <div className="text-xs text-muted-foreground mt-1 font-medium">Faturamento mensal médio estimado</div>
@@ -451,10 +443,13 @@ export function ProfissionaisPage() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-border">
-                  <Button className="w-full action whatsapp h-11 text-xs" asChild>
+                  <Button 
+                    className="w-full h-11 rounded-full bg-whatsapp text-white hover:opacity-95 font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 px-3 shadow-sm transition-all" 
+                    asChild
+                  >
                     <a href={getProfissionalWhatsAppUrl(loc.city)} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      <span>Consultar vagas em {loc.city.split('/')[0].trim()}</span>
+                      <MessageCircle className="w-4 h-4 shrink-0" />
+                      <span>Consultar vagas</span>
                     </a>
                   </Button>
                 </div>
