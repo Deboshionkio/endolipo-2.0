@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="goldOuter" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffe8a3"/>
+      <stop offset="25%" stop-color="#e5aa47"/>
+      <stop offset="60%" stop-color="#b67a24"/>
+      <stop offset="85%" stop-color="#d49b42"/>
+      <stop offset="100%" stop-color="#8a5310"/>
+    </radialGradient>
+    <linearGradient id="goldInnerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd885"/>
+      <stop offset="50%" stop-color="#9d6419"/>
+      <stop offset="100%" stop-color="#ffdf94"/>
+    </linearGradient>
+    <radialGradient id="blueCore" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#143265"/>
+      <stop offset="60%" stop-color="#0a1b3b"/>
+      <stop offset="100%" stop-color="#061024"/>
+    </radialGradient>
+    <filter id="badgeShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#badgeShadow)">
+    <!-- Outer Gold Ring -->
+    <circle cx="100" cy="100" r="95" fill="url(#goldOuter)"/>
+    
+    <!-- Thin Inner Ring -->
+    <circle cx="100" cy="100" r="77" fill="none" stroke="url(#goldInnerRing)" stroke-width="2"/>
+    
+    <!-- Dark Navy Core -->
+    <circle cx="100" cy="100" r="74" fill="url(#blueCore)"/>
+
+    <!-- Text: RECONHECIDO -->
+    <text x="100" y="58" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" font-weight="800" fill="#ffffff" letter-spacing="1.2">RECONHECIDO</text>
+
+    <!-- Line Left -->
+    <line x1="45" y1="71" x2="72" y2="71" stroke="#ffffff" stroke-width="0.8" opacity="0.6"/>
+    <!-- Text: PELO -->
+    <text x="100" y="74" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#ffffff" letter-spacing="1">PELO</text>
+    <!-- Line Right -->
+    <line x1="128" y1="71" x2="155" y2="71" stroke="#ffffff" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Text: MEC -->
+    <text x="100" y="117" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="37" font-weight="900" fill="#ffffff" letter-spacing="0.5">MEC</text>
+
+    <!-- 5 Gold Stars -->
+    <g fill="#fec347" transform="translate(100, 137)">
+      <!-- Star 1 (-36) -->
+      <polygon points="0,-6 1.8,-1.8 6.3,-1.8 2.7,0.9 4,5.4 0,2.7 -4,5.4 -2.7,0.9 -6.3,-1.8 -1.8,-1.8" transform="translate(-34, 0) scale(1.1)"/>
+      <!-- Star 2 (-18) -->
+      <polygon points="0,-6 1.8,-1.8 6.3,-1.8 2.7,0.9 4,5.4 0,2.7 -4,5.4 -2.7,0.9 -6.3,-1.8 -1.8,-1.8" transform="translate(-17, 0) scale(1.1)"/>
+      <!-- Star 3 (Center) -->
+      <polygon points="0,-6 1.8,-1.8 6.3,-1.8 2.7,0.9 4,5.4 0,2.7 -4,5.4 -2.7,0.9 -6.3,-1.8 -1.8,-1.8" transform="translate(0, -1) scale(1.25)"/>
+      <!-- Star 4 (+18) -->
+      <polygon points="0,-6 1.8,-1.8 6.3,-1.8 2.7,0.9 4,5.4 0,2.7 -4,5.4 -2.7,0.9 -6.3,-1.8 -1.8,-1.8" transform="translate(17, 0) scale(1.1)"/>
+      <!-- Star 5 (+36) -->
+      <polygon points="0,-6 1.8,-1.8 6.3,-1.8 2.7,0.9 4,5.4 0,2.7 -4,5.4 -2.7,0.9 -6.3,-1.8 -1.8,-1.8" transform="translate(34, 0) scale(1.1)"/>
+    </g>
+  </g>
+</svg>
