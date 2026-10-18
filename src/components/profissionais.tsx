@@ -142,29 +142,29 @@ export function ProfissionaisPage() {
       {/* Top Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <a href="/" className="brand text-3xl md:text-4xl" aria-label="Endolipo, voltar para home">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+            <a href="/" className="brand text-2xl sm:text-3xl lg:text-4xl" aria-label="Endolipo, voltar para home">
               endolipo<sup>®</sup><span className="brand-star text-brand-orange">✧</span>
             </a>
-            <span className="hidden md:inline-flex items-center text-xs font-semibold uppercase tracking-wider text-muted-foreground pl-4 border-l border-border">
+            <span className="hidden md:inline-flex items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50 dark:bg-orange-950/60 border border-brand-orange/30 px-2.5 py-1 rounded-full whitespace-nowrap">
               Área do Profissional da Saúde
             </span>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <a href="#pilares" className="hover:text-brand-orange transition-colors">6 Pilares</a>
-            <a href="#publico" className="hover:text-brand-orange transition-colors">Quem pode participar</a>
-            <a href="#turmas" className="hover:text-brand-orange transition-colors">Próximas Turmas</a>
-            <a href="#faq" className="hover:text-brand-orange transition-colors">Dúvidas</a>
-            <a href="/" className="text-muted-foreground hover:text-foreground text-xs uppercase tracking-wider transition-colors">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-7 text-xs xl:text-sm font-medium">
+            <a href="#pilares" className="whitespace-nowrap hover:text-brand-orange transition-colors">6 Pilares</a>
+            <a href="#publico" className="whitespace-nowrap hover:text-brand-orange transition-colors">Quem pode participar</a>
+            <a href="#turmas" className="whitespace-nowrap hover:text-brand-orange transition-colors">Próximas Turmas</a>
+            <a href="#faq" className="whitespace-nowrap hover:text-brand-orange transition-colors">Dúvidas</a>
+            <a href="/" className="whitespace-nowrap text-muted-foreground hover:text-brand-orange text-xs uppercase tracking-wider transition-colors pl-3 border-l border-border">
               ← Voltar ao site
             </a>
           </nav>
 
-          <div className="flex items-center gap-3">
-            <Button className="action whatsapp text-xs md:text-sm h-10 px-4 md:px-5" asChild>
+          <div className="flex items-center gap-3 shrink-0">
+            <Button className="action whatsapp text-xs md:text-sm h-10 px-4 md:px-5 shrink-0 whitespace-nowrap" asChild>
               <a href={getProfissionalWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4 shrink-0" />
                 <span>Falar com Consultor</span>
               </a>
             </Button>
