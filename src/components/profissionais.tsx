@@ -146,7 +146,7 @@ export function ProfissionaisPage() {
             <a href="/" className="brand text-2xl lg:text-3xl" aria-label="Endolipo, voltar para home">
               endolipo<sup>®</sup><span className="brand-star text-brand-orange">✧</span>
             </a>
-            <span className="hidden sm:inline-flex items-center text-[10px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50 dark:bg-orange-950/60 border border-brand-orange/30 px-2 py-0.5 rounded-full whitespace-nowrap mx-4 lg:mx-6">
+            <span className="hidden sm:inline-flex items-center text-xs lg:text-[13px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50/90 dark:bg-orange-950/60 border border-brand-orange/40 px-4 lg:px-5 py-2 rounded-full whitespace-nowrap ml-4 lg:ml-5 mr-5 lg:mr-7 shadow-xs">
               Área Profissional
             </span>
           </div>
