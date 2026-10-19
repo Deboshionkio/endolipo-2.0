@@ -88,7 +88,7 @@ export function EndolipoPage() {
           <p>Endolipo<sup>®</sup> é um protocolo exclusivo de lipo sem cirurgia, minimamente invasivo, que reduz a gordura localizada, firma a pele e modela o seu corpo.</p>
           <div className="actions"><Button className="action" asChild><a href={getWhatsAppUrl('Olá! Gostaria de agendar uma avaliação Endolipo®.')} target="_blank" rel="noopener noreferrer">Agende sua avaliação <ArrowRight /></a></Button><Button className="action outline-light" variant="outline" asChild><a href="#clinicas"><MapPin /> Encontre uma clínica</a></Button></div>
         </div>
-        <img className="hero-handwritten-img" src="/seu-corpo-script.png" alt="Seu corpo em sua nova versão!" width={185} height={108} />
+        <img className="hero-handwritten-img" src="/seu-corpo-script.png" alt="Seu corpo em sua nova versão!" width={175} height={150} />
         <div className="hero-perks">{[[ShieldCheck, 'Procedimento', 'seguro'], [CalendarDays, 'Retorno no', 'mesmo dia'], [Clock3, 'Sem tempo', 'de recuperação'], [Crosshair, 'Tecnologia', 'de precisão']].map(([Icon, first, second], i) => { const PerkIcon = Icon as typeof ShieldCheck; return <div className="perk" key={i}><PerkIcon /><span>{String(first)}<br />{String(second)}</span></div>; })}</div>
       </div>
     </section>
