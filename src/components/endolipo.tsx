@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { ArrowRight, ArrowLeft, CalendarDays, ShieldCheck, Clock3, Crosshair, Waves, Leaf, CircleDot, MapPin, Menu, X, Camera, Star, HeartPulse, GraduationCap, ClipboardCheck, Users, MessageCircle, Instagram, Facebook, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CalendarDays, ShieldCheck, Clock3, Crosshair, Waves, Leaf, CircleDot, MapPin, Menu, X, Camera, Star, HeartPulse, GraduationCap, ClipboardCheck, Users, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
@@ -8,7 +8,7 @@ const benefits = [
   { icon: CircleDot, title: 'Reduz gordura localizada', text: 'Atua diretamente nas células de gordura, ajudando a definir o contorno corporal.' },
   { icon: Waves, title: 'Estimula o colágeno', text: 'A energia controlada estimula a produção de colágeno, melhorando a firmeza da pele.' },
   { icon: Leaf, title: 'Favorece retração da pele', text: 'Contribui para uma pele mais firme e com melhor elasticidade.' },
-  { icon: Sparkles, title: 'Contorno mais definido', text: 'Um cuidado personalizado, valorizando a sua melhor versão.' },
+  { icon: BodyContourIcon, title: 'Contorno mais definido', text: 'Resultados naturais e harmoniosos, valorizando a sua melhor versão.' },
 ];
 const womenAreas = ['Abdômen', 'Flancos', 'Braços', 'Coxas', 'Papada', 'Costas'];
 const menAreas = ['Abdômen', 'Flancos', 'Braços', 'Peitoral', 'Costas'];
@@ -40,6 +40,20 @@ function FatCellsIcon(props: React.SVGProps<SVGSVGElement>) {
       <circle cx="17" cy="14" r="2.8" />
       <circle cx="12" cy="17.8" r="2.7" />
       <circle cx="7.2" cy="14.5" r="2.6" />
+    </svg>
+  );
+}
+
+function BodyContourIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M 8.0 2.5 C 7.8 7.0 7.2 10.5 5.5 14.0 C 4.6 16.0 4.8 18.5 5.0 21.5" />
+      <path d="M 16.0 2.5 C 16.2 7.0 16.8 10.5 18.5 14.0 C 19.4 16.0 19.2 18.5 19.0 21.5" />
+      <path d="M 6.4 13.2 H 17.6" />
+      <path d="M 6.6 13.2 L 12.0 19.5 L 17.4 13.2" />
+      <circle cx="12" cy="10.8" r="0.8" fill="currentColor" stroke="none" />
+      <path d="M 4.2 5.3 Q 4.5 7.2 6.4 7.5 Q 4.5 7.8 4.2 9.7 Q 3.9 7.8 2.0 7.5 Q 3.9 7.2 4.2 5.3 Z" fill="currentColor" stroke="none" />
+      <path d="M 19.8 5.3 Q 20.1 7.2 22.0 7.5 Q 20.1 7.8 19.8 9.7 Q 19.5 7.8 17.6 7.5 Q 19.5 7.2 19.8 5.3 Z" fill="currentColor" stroke="none" />
     </svg>
   );
 }
