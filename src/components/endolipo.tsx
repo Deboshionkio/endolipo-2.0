@@ -115,7 +115,7 @@ export function EndolipoPage() {
 
     <section className="benefits orange-band" id="beneficios"><div className="container"><div className="benefits-heading"><h2>Por que escolher <span>Endolipo<sup>®</sup></span></h2><span className="heading-line" /><p className="eyebrow">Mais do que estética. Mais bem-estar.</p></div><div className="benefit-grid">{benefits.map(({ icon: Icon, title, text }) => <article key={title}><div className="benefit-title"><Icon /><h3>{title}</h3></div><p>{text}</p></article>)}</div></div></section>
 
-    <section className="results container" id="resultados"><Heading title="Resultados e experiência" note="HISTÓRIAS REAIS DE MAIS CONFIANÇA E BEM-ESTAR." /><div className="results-grid"><div className="result-feature"><img src="/abdomen-fem.jpg" alt="Bem-estar e cuidado corporal" loading="lazy" width={800} height={533} /><span>Uma nova relação com você.</span></div>{[
+    <section className="results container" id="resultados"><Heading title="Resultados e experiência" note="HISTÓRIAS REAIS DE MAIS CONFIANÇA E BEM-ESTAR." /><div className="results-grid"><div className="result-feature"><img src="/resultado-procedimento.webp" alt="Demonstração do procedimento Endolipo®" loading="lazy" width={698} height={402} /></div>{[
       ['"Me senti mais confiante e leve."', 'O procedimento superou minhas expectativas. Me senti mais confiante no meu corpo.', '/juliana.jpg', 'Juliana M.'],
       ['"Procedimento tranquilo e ótimo atendimento."', 'O processo foi leve e o resultado foi natural. Excelente equipe.', '/carlos.jpg', 'Carlos R.'],
       ['"Gostei do resultado e da praticidade."', 'Vi uma grande diferença na firmeza da pele e no contorno. Me sinto ainda mais eu.', '/mariana.jpg', 'Mariana S.'],

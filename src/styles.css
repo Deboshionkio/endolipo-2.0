@@ -250,7 +250,7 @@ sup { font-size: .36em; vertical-align: super; }
 .secondary-regions { grid-template-columns: repeat(auto-fit, minmax(55px, 1fr)); }
 .gallery-arrow { width: 44px; height: 44px; }
 .gallery-item { aspect-ratio: 1.12; height: auto; }
-.result-feature { aspect-ratio: 1.5; min-width: 0; }
+.result-feature { aspect-ratio: 349 / 201; min-width: 0; }
 .result-feature img { position: absolute; inset: 0; }
 .hero-shade { background: linear-gradient(90deg, rgba(25, 12, 5, 0.74) 0%, rgba(25, 12, 5, 0.5) 30%, rgba(25, 12, 5, 0.18) 44%, transparent 52%); }
 @media (min-width: 801px) and (max-width: 1000px) {
