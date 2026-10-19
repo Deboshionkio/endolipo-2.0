@@ -13,8 +13,8 @@ const benefits = [
 const womenAreas = ['Abdômen', 'Flancos', 'Braços', 'Coxas', 'Papada', 'Costas'];
 const menAreas = ['Abdômen', 'Flancos', 'Braços', 'Peitoral', 'Costas'];
 
-export const WHATSAPP_PHONE = '554896442231';
-export const WHATSAPP_DISPLAY = '(48) 9644-2231';
+export const WHATSAPP_PHONE = '5548996442231';
+export const WHATSAPP_DISPLAY = '(48) 99644-2231';
 export const FACEBOOK_URL = 'https://www.facebook.com/people/Endolipo/61582861073071/';
 export const INSTAGRAM_URL = 'https://www.instagram.com/endolipo.brasil?exln=ajY3MTBhbW0yYjll';
 
