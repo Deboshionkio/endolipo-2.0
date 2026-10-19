@@ -66,7 +66,7 @@ export function EndolipoPage() {
           <p>Endolipo<sup>®</sup> é um protocolo exclusivo de lipo sem cirurgia, minimamente invasivo, que reduz a gordura localizada, firma a pele e modela o seu corpo.</p>
           <div className="actions"><Button className="action" onClick={() => openContact()}>Agende sua avaliação <ArrowRight /></Button><Button className="action outline-light" variant="outline" asChild><a href="#clinicas"><MapPin /> Encontre uma clínica</a></Button></div>
         </div>
-        <p className="hero-handwritten script">Seu corpo<br />em sua nova<br />versão.</p>
+        <img className="hero-handwritten-img" src="/seu-corpo-script.png" alt="Seu corpo em sua nova versão!" width={185} height={108} />
         <div className="hero-perks">{[[ShieldCheck, 'Procedimento', 'seguro'], [CalendarDays, 'Retorno no', 'mesmo dia'], [Clock3, 'Recuperação', 'personalizada'], [Crosshair, 'Tecnologia', 'de precisão']].map(([Icon, first, second], i) => { const PerkIcon = Icon as typeof ShieldCheck; return <div className="perk" key={i}><PerkIcon /><span>{String(first)}<br />{String(second)}</span></div>; })}</div>
       </div>
     </section>
