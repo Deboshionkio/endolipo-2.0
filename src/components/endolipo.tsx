@@ -44,18 +44,8 @@ function FatCellsIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-function BodyContourIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M 8.0 2.5 C 7.8 7.0 7.2 10.5 5.5 14.0 C 4.6 16.0 4.8 18.5 5.0 21.5" />
-      <path d="M 16.0 2.5 C 16.2 7.0 16.8 10.5 18.5 14.0 C 19.4 16.0 19.2 18.5 19.0 21.5" />
-      <path d="M 6.4 13.2 H 17.6" />
-      <path d="M 6.6 13.2 L 12.0 19.5 L 17.4 13.2" />
-      <circle cx="12" cy="10.8" r="0.8" fill="currentColor" stroke="none" />
-      <path d="M 4.2 5.3 Q 4.5 7.2 6.4 7.5 Q 4.5 7.8 4.2 9.7 Q 3.9 7.8 2.0 7.5 Q 3.9 7.2 4.2 5.3 Z" fill="currentColor" stroke="none" />
-      <path d="M 19.8 5.3 Q 20.1 7.2 22.0 7.5 Q 20.1 7.8 19.8 9.7 Q 19.5 7.8 17.6 7.5 Q 19.5 7.2 19.8 5.3 Z" fill="currentColor" stroke="none" />
-    </svg>
-  );
+function BodyContourIcon() {
+  return <img src="/icone-contorno.png" alt="Contorno mais definido" width={43} height={43} className="benefit-icon-img" />;
 }
 
 export function EndolipoPage() {
