@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { ArrowRight, ArrowLeft, CalendarDays, ShieldCheck, Clock3, Crosshair, Waves, Leaf, CircleDot, MapPin, Menu, X, Camera, Star, HeartPulse, GraduationCap, ClipboardCheck, Users, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CalendarDays, ShieldCheck, Clock3, Crosshair, Waves, Leaf, CircleDot, MapPin, Menu, X, Camera, Star, HeartPulse, GraduationCap, ClipboardCheck, Users, MessageCircle, Instagram, Facebook, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
@@ -52,7 +52,7 @@ export function EndolipoPage() {
   const [menu, setMenu] = useState(false);
   const [gender, setGender] = useState('Mulheres');
   const [dialog, setDialog] = useState<string | null>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedMedia, setSelectedMedia] = useState<{ type: 'video' | 'photo'; src: string; poster?: string; title: string; subtitle?: string } | null>(null);
   const gallery = useRef<HTMLDivElement>(null);
   const openContact = (kind = 'Agende sua avaliação') => setDialog(kind);
   const areas = gender === 'Mulheres' ? womenAreas : menAreas;
@@ -75,7 +75,28 @@ export function EndolipoPage() {
     return '/hero-bg-clean.webp';
   };
   
-  const photos = ['/hero-bg-clean.webp', '/abdomen-fem.jpg', '/abdomen-masc.jpg', '/flanco-fem.jpg', '/bracos-fem.jpeg', '/papadas-fem.jpg', '/costas-fem.jpg', '/costas-masc.jpg'];
+  const galleryItems = [
+    {
+      type: 'video' as const,
+      src: '/videos/reel_carro_chefe.mp4',
+      poster: '/videos/reel_carro_chefe_thumb.jpg',
+      title: 'Transformação & Autoestima',
+      subtitle: 'O Endolipo® atua onde a dieta e o exercício não chegam.'
+    },
+    {
+      type: 'video' as const,
+      src: '/videos/reel_1.mp4',
+      poster: '/videos/reel_1_thumb.jpg',
+      title: 'Emagrecer vs Gordura Localizada',
+      subtitle: 'Entenda como a microfibra óptica age nas células de gordura com precisão.'
+    },
+    { type: 'photo' as const, src: '/abdomen-fem.jpg', title: 'Abdômen Feminino' },
+    { type: 'photo' as const, src: '/flanco-fem.jpg', title: 'Flancos e Cintura' },
+    { type: 'photo' as const, src: '/abdomen-masc.jpg', title: 'Abdômen Masculino' },
+    { type: 'photo' as const, src: '/bracos-fem.jpeg', title: 'Braços e Retração' },
+    { type: 'photo' as const, src: '/papadas-fem.jpg', title: 'Papada e Contorno Facial' },
+    { type: 'photo' as const, src: '/costas-fem.jpg', title: 'Costas e Flancos' },
+  ];
 
   return <main>
     <section className="hero" id="inicio">
@@ -121,7 +142,7 @@ export function EndolipoPage() {
       ['"Gostei do resultado e da praticidade."', 'Vi uma grande diferença na firmeza da pele e no contorno. Me sinto ainda mais eu.', '/mariana.jpg', 'Mariana S.'],
     ].map(([title, text, image, name]) => <article className="experience" key={title}><img src={image} alt={name} loading="lazy" width={80} height={80} /><div><h3>{title}</h3><p>{text}</p><div className="flex items-center gap-2.5 mt-2"><span className="experience-author">{name}</span><span className="stars" aria-label="Cuidado e qualidade">{Array.from({ length: 5 }, (_, i) => <Star key={i} fill="currentColor" stroke="currentColor" />)}</span></div></div></article>)}</div><p className="medical-note">Resultados e recuperação variam conforme a avaliação e as características de cada pessoa.</p></section>
 
-    <section className="gallery-section container" id="galeria"><Heading title="Galeria de resultados" note="Fotos e vídeos reais de pacientes Endolipo" /><div className="gallery-wrap"><Button className="gallery-arrow previous" variant="outline" size="icon" aria-label="Fotos anteriores" onClick={() => gallery.current?.scrollBy({ left: -360, behavior: 'smooth' })}><ArrowLeft /></Button><div className="gallery-track" ref={gallery}>{photos.map((src, i) => <Button className="gallery-item" variant="ghost" key={src} onClick={() => setSelectedImage(src)} aria-label={`Ampliar foto ${i + 1}`}><img src={src} alt="Foto ilustrativa" loading="lazy" width={300} height={240} /><span className="photo-badge"><Camera /> Foto</span></Button>)}</div><Button className="gallery-arrow next" variant="outline" size="icon" aria-label="Próximas fotos" onClick={() => gallery.current?.scrollBy({ left: 360, behavior: 'smooth' })}><ArrowRight /></Button></div></section>
+    <section className="gallery-section container" id="galeria"><Heading title="Galeria de resultados" note="Fotos e vídeos reais de pacientes Endolipo" /><div className="gallery-wrap"><Button className="gallery-arrow previous" variant="outline" size="icon" aria-label="Fotos anteriores" onClick={() => gallery.current?.scrollBy({ left: -360, behavior: 'smooth' })}><ArrowLeft /></Button><div className="gallery-track" ref={gallery}>{galleryItems.map((item, i) => <Button className={`gallery-item ${item.type === 'video' ? 'is-video' : ''}`} variant="ghost" key={item.src + i} onClick={() => setSelectedMedia(item)} aria-label={`Ver ${item.type === 'video' ? 'vídeo' : 'foto'}: ${item.title}`}><img src={item.poster || item.src} alt={item.title} loading="lazy" width={300} height={240} />{item.type === 'video' ? (<><span className="photo-badge video-badge"><Play className="w-3 h-3 fill-current" /> Vídeo</span><span className="video-play-overlay"><Play className="w-5 h-5 fill-white ml-0.5" /></span></>) : (<span className="photo-badge"><Camera /> Foto</span>)}</Button>)}</div><Button className="gallery-arrow next" variant="outline" size="icon" aria-label="Próximas fotos" onClick={() => gallery.current?.scrollBy({ left: 360, behavior: 'smooth' })}><ArrowRight /></Button></div></section>
 
     <section className="professional orange-band" id="profissionais"><div className="professional-photo"><img src="/profissional-saude.webp" alt="Profissional da saúde em uma clínica" loading="lazy" width={1536} height={1024} /></div><div className="professional-copy"><h2>É profissional da saúde?</h2><p>Conheça a área exclusiva da Endolipo<sup>®</sup> para profissionais<br className="desktop-break" /> e descubra protocolos, formações e oportunidades na rede.</p><Button className="action" asChild><a href="/profissionais">Acessar área do profissional <ArrowRight /></a></Button></div><div className="professional-perks">{[[HeartPulse, 'Protocolos exclusivos'], [GraduationCap, 'Formação especializada'], [ClipboardCheck, 'Suporte científico'], [Users, 'Oportunidades na rede']].map(([Icon, label], i) => { const PerkIcon = Icon as typeof Users; return <div key={i}><PerkIcon /><span>{String(label)}</span></div>; })}</div></section>
 
@@ -130,6 +151,6 @@ export function EndolipoPage() {
     <footer className="site-footer orange-band"><div className="container footer-main"><Logo /><nav aria-label="Navegação do rodapé">{nav.map(([label, id]) => <a key={id} href={id === 'profissionais' ? '/profissionais' : `#${id}`}>{label}</a>)}</nav><div className="social-links">{[[Instagram, 'Instagram', INSTAGRAM_URL], [Facebook, 'Facebook', FACEBOOK_URL]].map(([Icon, name, url], i) => { const Social = Icon as typeof Instagram; return url ? <Button variant="ghost" size="icon" key={i} aria-label={String(name)} asChild><a href={String(url)} target="_blank" rel="noopener noreferrer"><Social /></a></Button> : <Button variant="ghost" size="icon" key={i} aria-label={String(name)} onClick={() => setDialog(String(name))}><Social /></Button>; })}</div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Endolipo<sup>®</sup>. Todos os direitos reservados.</span><span>Seu corpo. Sua essência. Sua melhor versão.</span></div></footer>
 
     <Dialog open={dialog !== null} onOpenChange={open => { if (!open) setDialog(null); }}><DialogContent className="contact-dialog"><span className="dialog-mark"><HeartPulse /></span><DialogTitle>{dialog}</DialogTitle><DialogDescription>{dialog?.startsWith('Tratamento') ? 'A indicação do tratamento depende de uma avaliação individual com profissional habilitado.' : 'Entre em contato diretamente com nossa equipe oficial pelo WhatsApp para tirar dúvidas e agendar sua avaliação.'}</DialogDescription><div className="actions justify-center mt-3"><Button className="action whatsapp" asChild><a href={getWhatsAppUrl(`Olá! Gostaria de agendar uma avaliação para ${dialog?.toLowerCase()}.`)} target="_blank" rel="noopener noreferrer"><MessageCircle /> Agendar pelo WhatsApp <ArrowRight /></a></Button><Button variant="outline" onClick={() => setDialog(null)}>Voltar ao site</Button></div></DialogContent></Dialog>
-    <Dialog open={selectedImage !== null} onOpenChange={open => { if (!open) setSelectedImage(null); }}><DialogContent className="photo-dialog"><DialogTitle>Galeria Endolipo</DialogTitle><DialogDescription>Imagem ilustrativa de cuidado e bem-estar.</DialogDescription>{selectedImage && <img src={selectedImage} alt="Foto ampliada da galeria Endolipo" />}</DialogContent></Dialog>
+    <Dialog open={selectedMedia !== null} onOpenChange={open => { if (!open) setSelectedMedia(null); }}><DialogContent className="photo-dialog max-w-lg"><DialogTitle>{selectedMedia?.title || 'Galeria Endolipo®'}</DialogTitle><DialogDescription>{selectedMedia?.subtitle || 'Fotos e vídeos reais de resultados e tecnologia Endolipo®.'}</DialogDescription>{selectedMedia?.type === 'video' ? (<video src={selectedMedia.src} poster={selectedMedia.poster} controls autoPlay playsInline className="w-full max-h-[72vh] rounded-md bg-black object-contain mt-2" />) : (selectedMedia && <img src={selectedMedia.src} alt={selectedMedia.title || "Foto ampliada da galeria Endolipo"} className="w-full max-h-[72vh] object-contain rounded-md mt-2" />)}</DialogContent></Dialog>
   </main>;
 }
