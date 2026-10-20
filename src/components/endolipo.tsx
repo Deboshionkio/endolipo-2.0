@@ -78,9 +78,10 @@ export function EndolipoPage() {
   const galleryItems = [
     {
       type: 'photo' as const,
-      src: '/abdomen-fem.jpg',
-      title: 'Abdômen Feminino',
-      subtitle: 'Definição e retração da pele após o protocolo Endolipo®.'
+      src: '/resultado-real-abdomen.webp',
+      poster: '/resultado-real-abdomen-thumb.webp',
+      title: 'Resultados Reais — Antes e Depois',
+      subtitle: 'Evolução real de 77 dias em abdômen, flancos e interno de coxa.'
     },
     {
       type: 'video' as const,
