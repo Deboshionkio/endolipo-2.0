@@ -77,6 +77,12 @@ export function EndolipoPage() {
   
   const galleryItems = [
     {
+      type: 'photo' as const,
+      src: '/abdomen-fem.jpg',
+      title: 'Abdômen Feminino',
+      subtitle: 'Definição e retração da pele após o protocolo Endolipo®.'
+    },
+    {
       type: 'video' as const,
       src: '/videos/reel_carro_chefe.mp4',
       poster: '/videos/reel_carro_chefe_thumb.jpg',
@@ -84,17 +90,33 @@ export function EndolipoPage() {
       subtitle: 'O Endolipo® atua onde a dieta e o exercício não chegam.'
     },
     {
+      type: 'photo' as const,
+      src: '/flanco-fem.jpg',
+      title: 'Flancos e Cintura',
+      subtitle: 'Harmonia de curvas e contorno mais definido.'
+    },
+    {
       type: 'video' as const,
-      src: '/videos/reel_1.mp4',
-      poster: '/videos/reel_1_thumb.jpg',
+      src: '/videos/reel_30_dias.mp4',
+      poster: '/videos/reel_30_dias_thumb.jpg',
+      title: 'Evolução em 30 Dias',
+      subtitle: 'Sem cortes, sem cirurgia e sem afastamento das atividades.'
+    },
+    {
+      type: 'photo' as const,
+      src: '/papadas-fem.jpg',
+      title: 'Papada e Contorno Facial',
+      subtitle: 'Definição mandibular e retração de pele no pescoço.'
+    },
+    {
+      type: 'video' as const,
+      src: '/videos/reel_emagrecer_gordura.mp4',
+      poster: '/videos/reel_emagrecer_gordura_thumb.jpg',
       title: 'Emagrecer vs Gordura Localizada',
       subtitle: 'Entenda como a microfibra óptica age nas células de gordura com precisão.'
     },
-    { type: 'photo' as const, src: '/abdomen-fem.jpg', title: 'Abdômen Feminino' },
-    { type: 'photo' as const, src: '/flanco-fem.jpg', title: 'Flancos e Cintura' },
     { type: 'photo' as const, src: '/abdomen-masc.jpg', title: 'Abdômen Masculino' },
     { type: 'photo' as const, src: '/bracos-fem.jpeg', title: 'Braços e Retração' },
-    { type: 'photo' as const, src: '/papadas-fem.jpg', title: 'Papada e Contorno Facial' },
     { type: 'photo' as const, src: '/costas-fem.jpg', title: 'Costas e Flancos' },
   ];
 
