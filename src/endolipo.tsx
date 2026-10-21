@@ -102,7 +102,7 @@ export function EndolipoPage() {
 
     <section className="results container" id="resultados"><Heading title="Resultados e experiência" note="HISTÓRIAS REAIS DE MAIS CONFIANÇA E BEM-ESTAR." /><div className="results-grid"><div className="result-feature"><img src="/abdomen-fem.jpg" alt="Bem-estar e cuidado corporal" loading="lazy" width={800} height={533} /><span>Uma nova relação com você.</span></div>{[
       ['"Me senti mais confiante e leve."', 'O procedimento superou minhas expectativas. Me senti mais confiante no meu corpo.', '/juliana.jpg', 'Juliana M.'],
-      ['"Procedimento tranquilo e ótimo atendimento."', 'O processo foi leve e o resultado foi natural. Excelente equipe.', '/carlos.jpg', 'Carlos R.'],
+      ['"Procedimento tranquilo e ótimo atendimento."', 'O processo foi leve e o resultado foi natural. Excelente equipe.', '/carlos.jpg?v=2', 'Carlos R.'],
       ['"Gostei do resultado e da praticidade."', 'Vi uma grande diferença na firmeza da pele e no contorno. Me sinto ainda mais eu.', '/mariana.jpg', 'Mariana S.'],
     ].map(([title, text, image, name]) => <article className="experience" key={title}><img src={image} alt={name} loading="lazy" width={80} height={80} /><div><h3>{title}</h3><p>{text}</p><div className="flex items-center gap-2 mt-1"><span className="text-xs font-semibold text-primary/80">{name}</span><span className="stars" aria-label="Cuidado e qualidade">{Array.from({ length: 5 }, (_, i) => <Star key={i} />)}</span></div></div></article>)}</div><p className="medical-note">Imagens ilustrativas. Resultados e recuperação variam conforme a avaliação e as características de cada pessoa.</p></section>
 
