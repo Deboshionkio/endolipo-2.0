@@ -25,28 +25,15 @@ export function getWhatsAppUrl(message = 'Olá! Gostaria de agendar uma avaliaç
 export function Logo({ className = '' }: { className?: string }) {
   return (
     <a href="#inicio" className={`brand ${className}`.trim()} aria-label="Endolipo, início">
-      endolipo<sup>®</sup>
-      <span className="brand-underline" aria-hidden="true">
-        <span className="brand-line" />
-        <svg className="brand-flare" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="brand-flare-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="currentColor" stopOpacity="1" />
-              <stop offset="25%" stopColor="currentColor" stopOpacity="0.6" />
-              <stop offset="55%" stopColor="currentColor" stopOpacity="0.18" />
-              <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-          <circle cx="20" cy="20" r="14" fill="url(#brand-flare-glow)" />
-          <g transform="rotate(45 20 20)">
-            <path d="M 20 9 Q 20.4 17.5 21.6 20 Q 20.4 22.5 20 31 Q 19.6 22.5 18.4 20 Q 19.6 17.5 20 9 Z" fill="currentColor" opacity="0.9" />
-            <path d="M 9 20 Q 17.5 20.4 20 21.6 Q 22.5 20.4 31 20 Q 22.5 19.6 20 18.4 Q 17.5 19.6 9 20 Z" fill="currentColor" opacity="0.9" />
-          </g>
-          <path d="M 20 0 Q 20.6 15 22 20 Q 20.6 25 20 40 Q 19.4 25 18 20 Q 19.4 15 20 0 Z" fill="currentColor" />
-          <path d="M 20 18 Q 25 19.4 40 20 Q 25 20.6 20 22 Z" fill="currentColor" />
-          <circle cx="20" cy="20" r="2" fill="currentColor" />
-        </svg>
-      </span>
+      <img
+        src="/endolipo-logo.webp"
+        alt="Endolipo®"
+        width={191}
+        height={74}
+        className="brand-logo-img"
+        loading="eager"
+        decoding="sync"
+      />
     </a>
   );
 }
