@@ -17,7 +17,7 @@ export function Logo({ className = '' }: { className?: string }) {
   return (
     <a href="#inicio" className={`brand ${className}`.trim()} aria-label="Endolipo, início">
       <img
-        src="/endolipo-logo.webp?v=5"
+        src="/endolipo-logo.webp?v=6"
         alt="Endolipo®"
         width={191}
         height={74}
