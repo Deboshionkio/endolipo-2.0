@@ -27,7 +27,8 @@ import {
   WHATSAPP_DISPLAY, 
   INSTAGRAM_URL, 
   FACEBOOK_URL, 
-  getWhatsAppUrl 
+  getWhatsAppUrl,
+  Logo
 } from '@/components/endolipo';
 
 export function getProfissionalWhatsAppUrl(cidade = '') {
@@ -143,9 +144,7 @@ export function ProfissionaisPage() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center shrink-0">
-            <a href="/" className="brand text-2xl lg:text-3xl" aria-label="Endolipo, voltar para home">
-              endolipo<sup>®</sup><span className="brand-star text-brand-orange">✧</span>
-            </a>
+            <Logo className="text-2xl lg:text-3xl" />
             <span className="hidden sm:inline-flex items-center text-xs lg:text-[13px] font-bold uppercase tracking-wider text-brand-orange bg-orange-50/90 dark:bg-orange-950/60 border border-brand-orange/40 px-4 lg:px-5 py-2 rounded-full whitespace-nowrap ml-4 lg:ml-5 mr-5 lg:mr-7 shadow-xs">
               Área Profissional
             </span>
